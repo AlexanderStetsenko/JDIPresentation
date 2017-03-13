@@ -1,5 +1,5 @@
 
-package com.itcraft.JDIPresentation;
+package com.itcraft.JDIPresentation.uiTests;
 
 import com.epam.jdi.uitests.web.selenium.driver.SeleniumDriverFactory;
 import com.epam.jdi.uitests.web.selenium.driver.WebDriverUtils;
@@ -28,7 +28,6 @@ public class TestsBase extends TestNGBase {
         WebSite.init(ItechCraftSite.class);
         logger.info("Run Tests");
     }
-
 
     @AfterSuite(alwaysRun = true)
     public static void tearDown() {
