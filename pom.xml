@@ -25,7 +25,7 @@
 
         <!--Using lib-->
         <jdi.version>1.0.58</jdi.version>
-        <!--<jdi.http.version>1.0.1</jdi.http.version>-->
+        <jdi.http.version>1.0.1</jdi.http.version>
         <selenium.version>3.0.1</selenium.version>
         <allure.version>1.4.5</allure.version>
 
@@ -45,11 +45,11 @@
             <version>${jdi.version}</version>
         </dependency>
 
-        <!--<dependency>-->
-            <!--<groupId>com.epam.jdi</groupId>-->
-            <!--<artifactId>jdi-http</artifactId>-->
-            <!--<version>${jdi.http.version}</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.epam.jdi</groupId>
+            <artifactId>jdi-http</artifactId>
+            <version>${jdi.http.version}</version>
+        </dependency>
         <!--Reports Allure-->
         <dependency>
             <groupId>ru.yandex.qatools.allure</groupId>

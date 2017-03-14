@@ -15,6 +15,8 @@ import static com.epam.jdi.uitests.core.settings.JDISettings.driverFactory;
 import static com.epam.jdi.uitests.core.settings.JDISettings.logger;
 import static com.epam.jdi.uitests.web.selenium.driver.WebDriverUtils.killAllRunWebDrivers;
 import static site.ItechCraftSite.contactPage;
+import static site.ItechCraftSite.*;
+
 
 /**
  * Created by Александр on 10.03.2017.
@@ -24,7 +26,7 @@ public class TestsBase extends TestNGBase {
     ItechCraftSite site = new ItechCraftSite();
 
     @BeforeSuite(alwaysRun = true)
-    public static void setUp(){
+    public static void setUp() throws Exception {
         WebSite.init(ItechCraftSite.class);
         logger.info("Run Tests");
     }

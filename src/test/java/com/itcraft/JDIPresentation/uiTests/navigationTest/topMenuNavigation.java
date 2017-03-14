@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
 
-import static site.ItechCraftSite.contactPage;
-import static site.ItechCraftSite.homePage;
-import static site.ItechCraftSite.topMenu;
+import static site.ItechCraftSite.*;
 import static site.enums.MenuEnum.*;
 
 /**
@@ -31,6 +29,16 @@ public class topMenuNavigation extends TestsBase{
         topMenu.select(CLIENTS);
         topMenu.select(BLOG);
         topMenu.hover(CONTACT);
+    }
+
+
+    //You can call item from any level of menu. Separate char is "|"
+    @Test
+    public void subMenuNavigation() throws Exception {
+//        topMenuSubItems.hoverAndClick("SERVICES|Web");
+//        topMenuSubItems.hoverAndClick("SERVICES|Mobile");
+        topMenuSubItems.hoverAndClick("SOLUTIONS|For Startups");
+        topMenuSubItems.hoverAndClick("SOLUTIONS");
 
     }
 }
