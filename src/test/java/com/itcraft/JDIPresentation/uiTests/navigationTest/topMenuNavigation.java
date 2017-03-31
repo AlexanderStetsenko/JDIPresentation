@@ -39,6 +39,8 @@ public class topMenuNavigation extends TestsBase{
 //        topMenuSubItems.hoverAndClick("SERVICES|Mobile");
         topMenuSubItems.hoverAndClick("SOLUTIONS|For Startups");
         topMenuSubItems.hoverAndClick("SOLUTIONS");
+        topMenuSubItems.hoverAndClick("CLIENTS");
+
 
     }
 }

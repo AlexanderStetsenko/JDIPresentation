@@ -37,4 +37,6 @@ public class TestsBase extends TestNGBase {
         contactPage.getDriver().quit();
         killAllRunWebDrivers();
     }
+
+
 }

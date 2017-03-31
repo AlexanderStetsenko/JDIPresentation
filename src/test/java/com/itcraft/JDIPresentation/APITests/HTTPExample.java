@@ -18,11 +18,12 @@ public class HTTPExample{
         HTTPService httpService = new HTTPService();
 
 
-        httpService.main.isAlive();
-        httpService.main.get().body.toString();
+
+        System.out.println(httpService.main.get().status);
+        String respons = httpService.main.get().body.toString();
 
 
-        System.out.println();
+
 
 
     }

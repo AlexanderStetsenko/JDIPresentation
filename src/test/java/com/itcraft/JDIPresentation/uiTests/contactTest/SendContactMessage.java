@@ -19,25 +19,27 @@ import static site.ItechCraftSite.contactPage;
 public class SendContactMessage extends TestsBase {
 
     @BeforeMethod
-    public static void before(Method method){
-        contactPage.isOpened();
+    public static void before(Method method){contactPage.isOpened();
     }
 
     @AfterMethod
-    public static void after(Method method){
-        contactPage.refresh();
+    public static void after(Method method){contactPage.refresh();
     }
 
     @Test(dataProvider = "contactFormData", dataProviderClass = ContactFormDataProvider.class)
     public void contactFormSending(ContactFormValid contactFormValid) throws Exception {
         contactPage.contactForm.submit(contactFormValid);
-        Assert.assertEquals(contactPage.contactForm.capchaValidation.getText(), "Failed to send your message. Please try later or contact the administrator by another method.");
+        Assert.assertEquals(
+                            contactPage.contactForm.capchaValidation.getText(),
+                            "Failed to send your message. Please try later or contact the administrator by another method.");
     }
 
     @Test(dataProvider = "contactFormDataWithoutEmail", dataProviderClass = ContactFormDataProvider.class)
     public void contactFormSendingWithEmptyEmailField(ContactFormWithoutEmail contactFormWithoutEmail) throws Exception {
         contactPage.contactForm.submit(contactFormWithoutEmail);
         System.out.println(contactPage.contactForm.capchaValidation.getText());
-        Assert.assertEquals(contactPage.contactForm.capchaValidation.getText(), "Validation errors occurred. Please confirm the fields and submit it again.");
+        Assert.assertEquals(
+                            contactPage.contactForm.capchaValidation.getText(),
+                            "Validation errors occurred. Please confirm the fields and submit it again.");
     }
 }
