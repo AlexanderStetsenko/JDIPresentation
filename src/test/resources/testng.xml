@@ -5,7 +5,6 @@
         <packages>
             <package name="com.itcraft.JDIPresentation.uiTests.navigationTest" />
             <package name="com.itcraft.JDIPresentation.uiTests.contactTest" />
-            <package name="com.itcraft.JDIPresentation.APITests" />
         </packages>
     </test>
 </suite>

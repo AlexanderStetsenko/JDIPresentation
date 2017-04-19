@@ -11,9 +11,11 @@ import org.testng.annotations.BeforeSuite;
 import site.ItechCraftSite;
 import site.pages.ContactPage;
 
+import java.io.IOException;
+
 import static com.epam.jdi.uitests.core.settings.JDISettings.driverFactory;
 import static com.epam.jdi.uitests.core.settings.JDISettings.logger;
-import static com.epam.jdi.uitests.web.selenium.driver.WebDriverUtils.killAllRunWebDrivers;
+import static com.epam.jdi.uitests.web.selenium.driver.WebDriverUtils.killAllRunWebBrowsers;
 import static site.ItechCraftSite.contactPage;
 import static site.ItechCraftSite.*;
 
@@ -32,10 +34,11 @@ public class TestsBase extends TestNGBase {
     }
 
     @AfterSuite(alwaysRun = true)
-    public static void tearDown() {
+    public static void tearDown() throws IOException {
         System.out.println("driver should be closed");
         contactPage.getDriver().quit();
-        killAllRunWebDrivers();
+        killAllRunWebBrowsers();
+
     }
 
 
